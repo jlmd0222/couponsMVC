@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btnOpenOffer" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">#FFFFFF</item>
+        <item name="colorButtonNormal">#726fda</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>
