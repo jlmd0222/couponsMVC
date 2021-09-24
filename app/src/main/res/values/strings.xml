@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">OffersCuponesMVC</string>
+    <string name="specialoffer">SpecialOffer</string>
+    <string name="list_offerts">Lista de Ofertas</string>
 </resources>

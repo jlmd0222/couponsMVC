@@ -10,12 +10,12 @@ class Coupon(couponJson: JsonObject?): Serializable {
     lateinit var id: String
     lateinit var image_url: String
     lateinit var title: String
-    lateinit var descriptionShort: String
-    lateinit var category: String
-    lateinit var description:String
+    var descriptionShort: String = ""
+    var category: String = ""
+    var description:String = ""
     lateinit var offer: String
     lateinit var website: String
-    lateinit var endDate: String
+    var endDate: String = ""
     lateinit var url: String
 
     init {

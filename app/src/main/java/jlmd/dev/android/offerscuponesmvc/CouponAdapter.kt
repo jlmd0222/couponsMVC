@@ -40,15 +40,16 @@ class CouponAdapter(var coupons : ArrayList<Coupon>, var resource: Int) : Recycl
 
         fun setDataCard(coupon: Coupon){
             this.coupon = coupon
-            Picasso.get().load(coupon.image_url).resize(520, 520).centerCrop().into(imgCoupon)
-            tvTitle.setText(coupon.title)
-            tvDescriptionShort.setText(coupon.descriptionShort)
-            tvCategory.setText(coupon.category)
-            tvDate.setText(coupon.endDate)
+            if (coupon.image_url.isNotEmpty())
+                Picasso.get().load(coupon.image_url).resize(520, 520).centerCrop().into(imgCoupon)
+            tvTitle.text = coupon.title
+            tvDescriptionShort.text = coupon.descriptionShort
+            tvCategory.text = coupon.category
+            tvDate.text = coupon.endDate
         }
 
         override fun onClick(v: View) {
-            Log.i("CLICK Coupon: ", coupon?.title)
+            coupon?.let { Log.i("CLICK Coupon: ", it.title) }
             val context = v.context
             val showPhotoIntent = Intent(context, CouponDetailActivity::class.java)
             showPhotoIntent.putExtra("COUPON", coupon)
